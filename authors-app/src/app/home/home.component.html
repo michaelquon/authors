@@ -1,0 +1,21 @@
+<div>
+  <button (click)="getCreate()" class="btn btn-primary">Add an author</button> 
+</div>
+<div id="author-table">
+  <table style="width: 400px;" class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Author</th>
+        <th scope="col">Action available</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of authors">
+        <td>{{i.name}}</td>
+        <td><button (click)="updateAuthor(i['_id'])" class="btn btn-primary" type="button">Edit</button>&nbsp;<button (click)="deleteAuthor( i['_id'])" class="btn btn-danger" type="button">Delete</button></td>
+      </tr>
+      </tbody>
+      </table>
+
+</div>
+<router-outlet></router-outlet>

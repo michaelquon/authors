@@ -1,0 +1,15 @@
+<div id=create>
+    <button type="button" (click)="getHome()" class="btn btn-primary">Home</button>
+    <h5>Edit this author</h5>
+  </div>
+  <div id="form-edit-box">
+      <form (submit)="addAuthor(authorName._id)">
+          <div class="form-group">
+            <label for="">Name:&nbsp;<span id="error">{{error}}</span></label>
+            <input style="width: 400px;" [(ngModel)]="authorName.name" name="Name" class="form-control form-control-lg" type="text">
+          </div>
+          <button (click)="getHome()" type="submit" class="btn btn-warning">Cancel</button>
+          <a href="/"><button type="submit" class="btn btn-primary">Submit</button></a>
+        </form>
+  </div>
+  

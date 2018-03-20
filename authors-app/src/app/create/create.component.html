@@ -1,0 +1,14 @@
+<div id=create>
+  <button type="button" (click)="getHome()" class="btn btn-primary">Home</button>
+  <h5>Add a new author</h5>
+</div>
+<div id="form-box">
+    <form (submit)="addAuthor()">
+        <div class="form-group">
+          <label for="">Name:&nbsp;<span id="error">{{error}}</span></label>
+          <input style="width: 400px;" [(ngModel)]="newAuthors.name" name="name" class="form-control form-control-lg" type="text" placeholder="Name">
+        </div>
+        <button (click)="getHome()" type="submit" class="btn btn-warning">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
